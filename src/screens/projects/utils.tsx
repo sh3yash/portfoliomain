@@ -1,24 +1,11 @@
-import {BiLogoPostgresql} from 'react-icons/bi';
-import {FaGoogle, FaNodeJs, FaReact} from 'react-icons/fa';
-import {SiNextdotjs, SiStripe, SiTailwindcss} from 'react-icons/si';
 
-import {
-  SiAmazonaws,
-  SiApollographql,
-  SiGraphql,
-  SiJavascript,
-  SiMongodb,
-  SiMysql,
-  SiNestjs,
-  SiPrisma,
-  SiTypescript,
-} from 'react-icons/si';
 
-import btfLofo from 'assets/images/btf-logo.png';
-import cfLofo from 'assets/images/cfLogo.png';
-import s2eLofo from 'assets/images/s2e-logo.webp';
+import { SiTailwindcss, SiExpress} from 'react-icons/si';
+import { FaHtml5, FaCss3, FaReact, FaPython } from "react-icons/fa";
+import { TbBrandJavascript } from "react-icons/tb";
+
 import smartFoodLogo from 'assets/images/smart-food.png';
-import viktreLofo from 'assets/images/viktre-logo.jpeg';
+
 import weatherAppLofo from 'assets/images/weather-app.png';
 import porfolioLogo from '../../../public/logo.svg';
 
@@ -31,115 +18,136 @@ export interface Project {
   git?: string;
 }
 
-export const comerciaProjects: Project[] = [
-  {
-    name: 'Community Funded',
-    description: `Team size: 10+. Platform streamlines fundraising and community management for education and healthcare sectors. Create branded,
-    mobile-optimized pages effortlessly and manage initiatives seamlessly. The platform integrates directly with
-    your brand, website, and existing payment processor. Ideal for inspiring donors and building engaged
-    communities.`,
-    img: cfLofo,
-    stack: [
-      <SiTypescript key="ts" color="#2F75C0" className="text-[28px]" />,
-      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-      <FaNodeJs key="node" color="#86cf35" className="text-[28px]" />,
-      <SiApollographql key="apollo" color="#E63CAD" className="text-[28px]" />,
-      <SiGraphql key="graphql" color="#E63CAD" className="text-[28px]" />,
-      <BiLogoPostgresql key="psql" color="#3A6596" className="text-[28px]" />,
-    ],
-  },
-  {
-    name: 'BTF',
-    description: `Team size: 5. Platform that supports athletes in their development on and off the field by giving them the tools to understand who they are and share
-    the context to their performance and their growth as a human being with the people most important to them on their journey.`,
-    img: btfLofo,
-    stack: [
-      <SiTypescript key="ts" color="#2F75C0" className="text-[28px]" />,
-      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-      <FaReact key="native" color="#5ED4F4" className="text-[28px]" />,
-      <FaNodeJs key="node" color="#86cf35" className="text-[28px]" />,
-      <SiMysql key="mysql" color="#3A6596" className="text-[28px]" />,
-      <SiPrisma key="prizma" color="#3294c9" className="text-[28px]" />,
-      <SiAmazonaws key="serverless" color="#F1941D" className="text-[28px]" />,
-    ],
-  },
-  {
-    name: 'Say2eat',
-    description: `Team size: 7. Say2eat helps restaurant chains increase direct
-    online sales, collect valuable consumer insights
-    and data, manage the customer relationship and
-    maximize customer loyalty. By enabling. personalized and fully automated conversations
-    with customers at scale, ordering food from your
-    favorite restaurants has become as frictionless
-    as messaging a friend. Say2eat provides a single
-    and seamless solution for all voice and message
-    applications (e.g Facebook Messenger, iMessage,
-    Amazon Echo, Google Home, etc.).
-    `,
-    img: s2eLofo,
-    stack: [
-      <SiNextdotjs key="next" className="text-[28px] text-black light:text-black" />,
-      <SiNestjs key="nestjs" color="#DA224C" className="text-[28px]" />,
-      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-      <FaNodeJs key="node" color="#86cf35" className="text-[28px]" />,
-      <SiMongodb key="mongodb" color="#2c913f" className="text-[28px]" />,
-    ],
-  },
-  {
-    name: 'Viktre Solution',
-    description: `Team size: 2. The main goal of the project is to allow a
-        user to make donations on the following social projects. My responsibilities were creating new functionality, creating new site versions (their
-      maintaining), bugs fixing, working with the Facebook application, add new requests to DB and fixing on the server side.`,
-    img: viktreLofo,
-    stack: [
-      <SiJavascript key="js" color="#E9D54B" className="text-[28px]" />,
-      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-      <FaNodeJs key="node" color="#86cf35" className="text-[28px]" />,
-      <SiMongodb key="mongodb" color="#2c913f" className="text-[28px]" />,
-    ],
-  },
-];
+
 
 export const customProjects: Project[] = [
+
+
   {
-    name: 'Weather React App',
-    url: 'https://weather.enikosoft.com/',
-    description: `React/Typescript/StyledComponent/zustand. You can find weather and current location time for any cities, searched by Google Place Api. Adaptive and responsive design. Weather data from https://www.visualcrossing.com`,
-    img: weatherAppLofo,
-    stack: [
-      <SiTypescript key="ts" color="#2F75C0" className="text-[28px]" />,
-      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-      <FaGoogle key="google" color="#000" className="text-[28px]" />,
-    ],
-    git: 'https://github.com/enikosoft/weather-widget',
-  },
-  {
-    name: 'Online shop "Smart Food"',
-    url: 'https://smart-food.enikosoft.com/',
-    description: `E-commerce project on Next.js, React, Tailwind, Stripe. Online shop for selling food. Adaptive and responsive design. Full checkout proccess. Using clerk auth. More information in github.`,
-    img: smartFoodLogo,
-    stack: [
-      <SiNextdotjs key="next" className="text-[28px] text-white light:text-black" />,
-      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
-      <SiTailwindcss key="tailwind" color="#3FBDCC" className="text-[28px]" />,
-      <SiStripe key="stripe" color="#6058f8" className="text-[28px]" />,
-      <BiLogoPostgresql key="postgresql" color="#3A6596" className="text-[28px]" />,
-    ],
-    git: 'https://github.com/enikosoft/next-ecommerce-smart-food',
-  },
-  {
-    name: 'My Portfolio',
-    url: '',
-    description: `Welcome to my portfolio! Explore my diverse range of projects,
-      showcasing my expertise in building responsive and dynamic web applications.
-      Dive into my code, discover my skills,
-      and get in touch to discuss exciting opportunities. Let's bring ideas to life through technology!`,
+    name: 'Shopify Clone',
+    url: 'https://shopifyclone3.netlify.app/',
+    description: `Develop an integrated payments gateway solution that seamlessly integrates with a website or
+              application, enabling secure and efficient online transactions, payment processing, and seamless
+              financial transactions between customers and businesses.`,
     img: porfolioLogo,
     stack: [
-      <SiTypescript key="ts" color="#2F75C0" className="text-[28px]" />,
+      <FaCss3 key="css" color='#5ED4F4' className="text-[28px]" />,
       <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
+      <FaHtml5 key="html" color='#ffA500' className="text-[28px]" />,
       <SiTailwindcss key="tailwind" color="#3FBDCC" className="text-[28px]" />,
     ],
-    git: 'https://github.com/enikosoft/portfolio',
+    git: 'https://github.com/sh3yash/Shopify_Clone',
   },
+
+  {
+    name: 'Clever-Minds',
+    url: 'https://cleverminds.netlify.app/',
+    description: `🍽️ Discover our CSS & React-powered food ordering site. Enjoy a visually appealing interface 
+              to explore diverse local menus. Customize and securely order your favorites for prompt delivery. Elevate your
+              dining experience with convenience and quality.`,
+    img: porfolioLogo,
+    stack: [
+      <FaCss3 key="css" color='#5ED4F4' className="text-[28px]" />,
+      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
+      <FaHtml5 key="html" color='#ffA500' className="text-[28px]" />,
+    ],
+    git: 'https://github.com/sh3yash/Clever-Minds',
+  },
+
+  {
+    name: 'Razor Pay Clone',
+    url: 'https://razorpayclonebyyash.netlify.app/#',
+    description: `Streamline Payments with the Razorpay Clone! Experience seamless
+     transactions and robust payment processing with our Razorpay clone built using React.js.
+      Whether you're a business looking to manage payments, track transactions, or integrate
+       multiple payment gateways, this solution provides all the tools you need. Simplify your
+        financial operations and enhance customer experience with a modern, intuitive interface
+         that ensures security and efficiency. 💳💼`,
+    img: weatherAppLofo,
+    stack: [
+      <FaCss3 key="css" color='#5ED4F4' className="text-[28px]" />,
+      <FaReact key="react" color="#5ED4F4" className="text-[28px]" />,
+      <FaHtml5 key="html" color='#ffA500' className="text-[28px]" />,
+    ],
+    git: 'https://github.com/sh3yash/RazorPay-Clone',
+  },
+  
+  {
+    name: 'College Website',
+    url: 'https://kmmgp.netlify.app/',
+    description: `Design a college website to provide essential information, such as courses, faculty, admission details,
+              events, and resources, ensuring a user-friendly experience for prospective students, current students,
+              and staff members.`,
+    img: porfolioLogo,
+    stack: [
+      <FaCss3 key="css" color='#5ED4F4' className="text-[28px]" />,
+      <FaHtml5 key="html" color='#ffA500' className="text-[28px]" />,
+      <TbBrandJavascript key="javascript" color="#FFFF00" className="text-[28px]" />,
+    ],
+    git: 'https://github.com/sh3yash/college-website',
+  },    
+
+  {
+    name: 'Sahaay- Farmers One Stop Solution"',
+    url: 'https://agriculturewebsite.netlify.app/',
+    description: `Empowering Farmers with Cutting-edge Tools! Explore seed prices,
+     stay informed with real-time weather updates, unlock government schemes, and more.
+      Cultivate success with smarter farming practices at your fingertips. 🌱🚜 `,
+    img: smartFoodLogo,
+    stack: [
+      <FaCss3 key="css" color='#5ED4F4' className="text-[28px]" />,
+      <FaHtml5 key="html" color='#ffA500' className="text-[28px]" />,
+      <TbBrandJavascript key="javascript" color="#FFFF00" className="text-[28px]" />,
+    ],
+    git: 'https://github.com/sh3yash/Sahaay',
+  },
+  
+
+  {
+    name: 'INTEGRATED PAYMENTS GATEWAY',
+    url: 'https://payment4integration.netlify.app/',
+    description: `Develop an integrated payments gateway solution that seamlessly integrates with a website or
+              application, enabling secure and efficient online transactions, payment processing, and seamless
+              financial transactions between customers and businesses.`,
+    img: porfolioLogo,
+    stack: [
+      <FaCss3 key="css" color='#5ED4F4' className="text-[28px]" />,
+      <FaHtml5 key="html" color='#ffA500' className="text-[28px]" />,
+      <TbBrandJavascript key="javascript" color="#FFFF00" className="text-[28px]" />,
+    ],
+    git: 'https://github.com/sh3yash/payment-integration',
+  },
+  
+
+  {
+    name: 'Face Recognition Based Attendance System',
+
+    description: `Design a Python-based face recognition attendance system for educational
+            institutions and workplaces,enabling accurate and real-time tracking of individuals for
+              efficient attendance management andrecord-keeping.`,
+    img: porfolioLogo,
+    stack: [
+      <FaPython key="python" color="#5ED4F4" className="text-[28px]" />,
+    ],
+    git: 'https://github.com/sh3yash/',
+  },  
+
+
+  {
+    name: 'ZimClothing',
+
+    description: `Develop an integrated payments gateway solution that seamlessly integrates with a website or
+              application, enabling secure and efficient online transactions, payment processing, and seamless
+              financial transactions between customers and businesses.`,
+    img: porfolioLogo,
+    stack: [
+      <SiExpress key="expressjs" color="#5ED4F4" className="text-[28px]" />,
+      <SiTailwindcss key="tailwind" color="#3FBDCC" className="text-[28px]" />,
+      <FaHtml5 key="html" color='#ffA500' className="text-[28px]" />,
+    ],
+    git: 'https://github.com/sh3yash/ZimClothing',
+  },
+  
+  
+
 ];

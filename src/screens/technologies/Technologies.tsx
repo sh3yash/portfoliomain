@@ -1,4 +1,4 @@
-import {DonwloadCVButton} from 'components/DownloadCVButton';
+
 import {skillset} from './utils';
 
 export const Technologies = () => {
@@ -33,8 +33,8 @@ export const Technologies = () => {
                       <span className="h-7 text-base font-semibold xl:text-2xl xl:font-bold">{item.label}</span>
                       {item?.expirience && (
                         <div className="flex flex-row pt-1 text-sm font-light sm:flex-col sm:pt-2 xl:text-base">
-                          <span className="mr-2 sm:mr-1">Expirience:</span>
-                          <span>{item?.expirience} years</span>
+                          <span className="mr-2 sm:mr-1">Proficiency Level:</span>
+                          <span>{item?.expirience} </span>
                         </div>
                       )}
                     </div>
@@ -48,7 +48,14 @@ export const Technologies = () => {
 
       <div className="mt-12 w-full">
         <i className="fond-light pr-4 text-lg text-primaryColor">More information</i>
-        <DonwloadCVButton isSmall />
+        <a
+          href="yash_resume.pdf"
+          download
+          title="Download CV"
+          className="w-full sm:w-auto rounded px-12 py-4 text-center bg-sky-500 text-white hover:bg-sky-600"
+        >
+          Download CV
+        </a>
       </div>
     </div>
   );
