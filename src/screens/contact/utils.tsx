@@ -1,5 +1,6 @@
 import {BiLogoGmail} from 'react-icons/bi';
 import {FaGithub, FaInstagramSquare, FaLinkedin} from 'react-icons/fa';
+import { SiLeetcode } from "react-icons/si";
 // import {FaTelegram} from 'react-icons/fa';
 const handleOpenSocialNetwork = (url: string) => () => {
   window.open(url, '_blank');
@@ -39,12 +40,28 @@ export const socialNetworks = (size: number = 54, isFooter = false) => [
   //     } hover:cursor-pointer`}
   //   />
   // </button>,
+
   <button
     title="instagram"
     key="instagram"
     onClick={handleOpenSocialNetwork('https://www.instagram.com/y.a.s.h__s.h/?hl=es')}
   >
     <FaInstagramSquare
+      size={size}
+      className={`m-auto text-[${size}px] ${
+        isFooter ? 'text-tabBarActiveTextColor' : 'text-themePrimaryColor'
+      } hover:cursor-pointer`}
+    />
+  </button>,
+
+
+
+  <button
+    title="leetcode"
+    key="leetcode"
+    onClick={handleOpenSocialNetwork('https://leetcode.com/yash_sharma33/')}
+  >
+    <SiLeetcode
       size={size}
       className={`m-auto text-[${size}px] ${
         isFooter ? 'text-tabBarActiveTextColor' : 'text-themePrimaryColor'
